@@ -1,0 +1,135 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 22px;
+	color: #262c27;
+}
+
+a {
+	text-decoration: none;
+	color: inherit; /*наследование цвета от родителя*/
+}
+
+h1, h2 , h3 , h4, h5, h6 {
+	margin: 0;
+}
+
+.container {
+	max-width: 1230px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.header {
+	background-image: url(../images/header-bg.jpeg);
+	background-size: cover; /*растягиваем картинку на р-р контейнера*/
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh; /*на всю высоту экрана*/
+	position: relative;
+}
+
+.header::before {
+	content: "";
+	position: absolute;
+	background-image: url(../images/header-decor.svg);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 456px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: translateY(50%);
+}
+
+.header::after {
+	content: "";
+	position: absolute;
+	background-image: url(../images/header-decor.svg);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 456px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: translateY(90%) rotate(180deg);
+}
+
+.header__top {
+	display: flex;
+	align-items: center;
+	padding: 57px 0;
+	justify-content: flex-end;
+	gap: 100px; /*отступ между кнопками*/
+	font-family: 'Comfortaa', cursive;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 22px;
+}
+
+.logo path {
+	transition: fill 0.3s ease;
+}
+
+.logo:hover path {
+	fill: #0093A1;
+	transition: fill 0.3s ease;
+}
+
+.header__btn {
+	text-transform: uppercase;
+	color: #fff;
+	padding: 12px 71px;
+	background-color: #262c27;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.header__btn:hover{
+	background-color: #B9C400;
+}
+
+.header__content {
+	min-height: calc(100vh - 161px);
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.header__content-box {
+	min-width: 550px;
+	text-align: center;
+	margin-right: 30px;
+	color: #fff;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 700;
+}
+
+.header__title {
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	font-size: 64px;
+	line-height: 71px;
+}
+
+.header__text {
+	font-size: 24px;
+	line-height: 27px;
+	margin-bottom: 20px;
+}
+
+.header__decor-text {
+	position: absolute;
+	top: 0;
+}
