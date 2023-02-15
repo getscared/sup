@@ -28,47 +28,12 @@ h1, h2 , h3 , h4, h5, h6, p {
 }
 
 .header {
-	background-image: url(../images/header-bg.jpeg);
-	background-size: cover; /*растягиваем картинку на р-р контейнера*/
-	background-repeat: no-repeat;
-	background-position: center;
-	min-height: 100vh; /*на всю высоту экрана*/
-	position: relative;
+	display: flex;
+	justify-content: flex-end;
 }
-
-.header::before { 
-	content: "";
-	position: absolute;
-	background-image: url(../images/header-decor.svg);
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 37Vh; /*456px/1230 */
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	transform: translateY(35%);
-	z-index: 2;
-}
-
-.header::after {
-	content: "";
-	position: absolute;
-	background-image: url(../images/header-decor.svg);
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 37Vh; /*456px/1230*/
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	transform: translateY(115%) rotate(180deg);
-	z-index: 3;
-} 
-
-
 
 .header__top {
+	position: absolute;
 	display: flex;
 	align-items: center;
 	padding: 57px 0;
@@ -79,6 +44,7 @@ h1, h2 , h3 , h4, h5, h6, p {
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 22px;
+	z-index: 5;
 }
 
 .logo path {
@@ -104,7 +70,16 @@ h1, h2 , h3 , h4, h5, h6, p {
 	background-color: #B9C400;
 }
 
-.header__content {
+.brand {
+	background-image: url(../images/header-bg.jpeg);
+	background-size: cover; /*растягиваем картинку на р-р контейнера*/
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh; /*на всю высоту экрана*/
+	position: relative;
+}
+
+.brand__content {
 	min-height: 80Vh; /* 161px/1230 */
 	display: flex;
 	align-items: center;
@@ -112,7 +87,7 @@ h1, h2 , h3 , h4, h5, h6, p {
 	position: relative;
 }
 
-.header__content-box {
+.brand__content-box {
 	min-width: 44%; /* 550px/1230 */
 	text-align: center;
 	margin-right: 30px;
@@ -121,39 +96,44 @@ h1, h2 , h3 , h4, h5, h6, p {
 	font-weight: 700;
 }
 
-.header__title {
+.brand__title {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	font-size: 64px;
 	line-height: 71px;
 }
 
-.header__text {
+.brand__text {
 	font-size: 24px;
 	line-height: 27px;
 	margin-bottom: 20px;
 }
 
-.header__decor-text {
+.brand__decor{
+	position: relative;
+	min-height: 20Vh;
+}
+
+.brand__decor-text {
 	position: absolute;
-	bottom: 25px;
+	bottom: 0;
 	color: #0093A1;
 }
 
-.header__decor-text--one {
+.brand__decor-text--one {
 	z-index: 1;
 	right: 11.788618%; /* 145px/1230 */
-	bottom: 80px;
+	bottom: 50%;
 }
 
-.header__decor-text--two {
+.brand__decor-text--two {
 	z-index: 4;
 	left: 21.544715%; /* 265px/1230 */
-	bottom: calc(-145px/2); /*50% from line-height*/
+	bottom: -30%;
 }
 
-.header__decor-text--one,
-.header__decor-text--two {
+.brand__decor-text--one,
+.brand__decor-text--two {
 	opacity: 0.3;
 	font-family: 'Comfortaa', cursive;
 	font-weight: 400;
@@ -161,7 +141,7 @@ h1, h2 , h3 , h4, h5, h6, p {
 	line-height: 145px;
 }
 
-.header__decor-text--three {
+.brand__decor-text--three {
 	max-width: 360px;
 	right: 145px;
 	font-family: 'Inter';
@@ -171,8 +151,43 @@ h1, h2 , h3 , h4, h5, h6, p {
 	line-height: 39px;
 	text-align: center;
 	z-index: 4;
-	bottom: -40px;
+	bottom: -15%;
 }
+
+.trees {
+	height: 18Vh; /* 180px/1230 */
+	background-color:#262C27;
+}
+
+.trees::before { 
+	content: "";
+	position: absolute;
+	background-image: url(../images/header-decor.svg);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 37Vh; 
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: translateY(40%);
+	z-index: 2;
+}
+
+.trees::after {
+	content: "";
+	position: absolute;
+	background-image: url(../images/header-decor.svg);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 37Vh; 
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: translateY(110%) rotate(180deg);
+	z-index: 3;
+}  
 
 .info {
 	background-image: url(../images/info-bg.jpg);
@@ -180,18 +195,6 @@ h1, h2 , h3 , h4, h5, h6, p {
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
-	margin-top: 90px;
-}
-
-.info::before {
-	content: "";
-	position: absolute;
-	height: 18Vh; /* 180px/1230 */
-	background-color: #262C27;
-	left: 0;
-	right: 0;
-	top: 0;
-	transform: translateY(-90px);
 }
 
 .info__top {
