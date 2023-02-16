@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 body {
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
@@ -27,16 +32,18 @@ h1, h2 , h3 , h4, h5, h6, p {
 	margin: 0 auto;
 }
 
-.header {
+/* header start */
+
+.header__top {
 	display: flex;
 	justify-content: flex-end;
 }
 
-.header__top {
+.header__menu {
 	position: absolute;
 	display: flex;
 	align-items: center;
-	padding: 57px 0;
+	padding: 57px 0 0 0;
 	justify-content: flex-end;
 	gap: 100px; /*отступ между кнопками*/
 	font-family: 'Comfortaa', cursive;
@@ -70,25 +77,34 @@ h1, h2 , h3 , h4, h5, h6, p {
 	background-color: #B9C400;
 }
 
-.brand {
+.header__phone {
+	min-width: 120px;
+}
+
+/*header end*/
+
+/*about start*/
+
+.about {
 	background-image: url(../images/header-bg.jpeg);
 	background-size: cover; /*растягиваем картинку на р-р контейнера*/
 	background-repeat: no-repeat;
 	background-position: center;
-	min-height: 100vh; /*на всю высоту экрана*/
+	min-height: 860px; /*на всю высоту экрана*/
+	max-height: 100vh; /*на всю высоту экрана*/
 	position: relative;
 }
 
-.brand__content {
-	min-height: 80Vh; /* 161px/1230 */
+.about__content {
+	min-height: 80Vh; 
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	position: relative;
 }
 
-.brand__content-box {
-	min-width: 44%; /* 550px/1230 */
+.about__content-box {
+	min-width: 44%; 
 	text-align: center;
 	margin-right: 30px;
 	color: #fff;
@@ -96,17 +112,22 @@ h1, h2 , h3 , h4, h5, h6, p {
 	font-weight: 700;
 }
 
-.brand__title {
+.about__title {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	font-size: 64px;
 	line-height: 71px;
+	padding-top: 252px;
 }
 
-.brand__text {
+.about__text {
 	font-size: 24px;
 	line-height: 27px;
 	margin-bottom: 20px;
+}
+
+.about__text:last-child {
+	margin-bottom: 315px;
 }
 
 .brand__decor{
@@ -122,13 +143,13 @@ h1, h2 , h3 , h4, h5, h6, p {
 
 .brand__decor-text--one {
 	z-index: 1;
-	right: 11.788618%; /* 145px/1230 */
+	right: 11.788618%; 
 	bottom: 50%;
 }
 
 .brand__decor-text--two {
 	z-index: 4;
-	left: 21.544715%; /* 265px/1230 */
+	left: 21.544715%; 
 	bottom: -30%;
 }
 
@@ -154,8 +175,9 @@ h1, h2 , h3 , h4, h5, h6, p {
 	bottom: -15%;
 }
 
+/*
 .trees {
-	height: 18Vh; /* 180px/1230 */
+	height: 18Vh; 
 	background-color:#262C27;
 }
 
@@ -201,10 +223,10 @@ h1, h2 , h3 , h4, h5, h6, p {
 	display: flex;
 	gap: 80px;
 	align-items: flex-end;
-	padding-top: 20%; /* 160px/1230 */
+	padding-top: 20%; 
 }
 
 .info__top-text {
 	max-width: 290px;
 }
-
+/*
