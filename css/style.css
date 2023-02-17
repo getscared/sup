@@ -27,8 +27,7 @@ h1, h2 , h3 , h4, h5, h6, p {
 }
 
 ul {
-	display: block;
-	list-style-type: disc;
+	list-style-type: none;
 	margin-block-start: 0;
 	margin-block-end: 0;
 	margin-inline-start: 0px;
@@ -53,7 +52,7 @@ ul {
 	position: absolute;
 	display: flex;
 	align-items: center;
-	padding: 57px 0 0 0;
+	padding: 63px 0 0 0;
 	justify-content: flex-end;
 	gap: 100px; /*отступ между кнопками*/
 	font-family: 'Comfortaa', cursive;
@@ -103,7 +102,7 @@ ul {
 	height: 100%;
 	position: relative;
 	padding-top: 104px;
-	padding-bottom: 315px;
+	padding-bottom: 295px;
 }
 
 .about__content {
@@ -157,18 +156,18 @@ ul {
 	z-index: 1;
 	left: 55.520833%;
 	bottom: 0;
-	transform: translateY(-50%);
+	transform: translateY(-38%);
 }
 
 .about__decor-text--two {
 	z-index: 4;
-	left: 33.125%; /* 636px/1920 */
-	transform: translateY(50%);
+	left: 33%; /* 636px/1920 */
+	transform: translateY(60%);
 }
 
 .about__decor-text--three {
 	max-width: 360px;
-	left: 55.520833%; /* 1066px/1920 */
+	left: 55%; /* 1066px/1920 */
 	font-family: 'Inter';
 	font-style: italic;
 	font-weight: 300;
@@ -176,7 +175,7 @@ ul {
 	line-height: 39px;
 	text-align: center;
 	z-index: 4;
-	transform: translateY(50%);
+	transform: translateY(75%);
 }
 
 /*About__decor end*/
@@ -190,7 +189,7 @@ ul {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 190px;
+	height: 180px;
 	position: relative;
 	z-index: 1;
 } 
@@ -206,7 +205,7 @@ ul {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	transform: translateY(5%);
+	transform: translateY(7%);
 	z-index: 2;
 }
 
@@ -221,7 +220,7 @@ ul {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	transform: translateY(55%) rotate(180deg);
+	transform: translateY(50%) rotate(180deg);
 	z-index: 3;
 }  
 
@@ -234,15 +233,13 @@ ul {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	padding-top: 75px;
-	margin-bottom: 150px;
 }
 
 .info__top {
 	display: flex;
 	gap: 80px;
 	position: relative;
-	padding-bottom: 597px;
+	padding-bottom: 603px;
 }
 
 .info__top-text {
@@ -270,6 +267,15 @@ ul {
 	background-color: transparent;
 	position: absolute;
 	top: 44%;
+	transition: all .3s ease;
+}
+
+.popup-btn:active path {
+	fill: #B9C400;
+}
+
+.popup-btn:active circle {
+	fill: #B9C400;
 }
 
 .popup-btn span {
@@ -292,7 +298,7 @@ ul {
 	font-size: 60px;
 	line-height: 67px;
 	color: #fff;
-	padding-right: 17%;
+	padding-right: 13%;
 }
 
 .info__specs-list {
@@ -310,26 +316,46 @@ ul {
 	color: #fff;
 }
 
+.info__specs-item:last-child {
+	padding-bottom: 15px;
+}
+
 .info__specs-caption {
 	flex-basis: 35%;
 	width: 60px;
-	padding: 15px 0;
+	padding: 15px 0 0 0;
 }
 
 .info__specs-text {
 	flex-basis:65%;
 	width: 440px;
-	padding: 15px 0;
+	padding: 15px 0 0 0;
 }
+
+
 
 /*Info end*/
 
 /*Price start*/
 
 .price {
-	background-color: red;
+	background-size: contain;
+	height: 100%
+	
 }
 
 .price__box {
 	display: flex;
+	justify-content: center;
+	padding-top: 150px;
+}
+
+.price__title {
+	text-transform: uppercase;
+	font-family: 'Comfortaa';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 67px;
+	color: #0093A1;
 }
