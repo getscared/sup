@@ -239,7 +239,8 @@ ul {
 	display: flex;
 	gap: 80px;
 	position: relative;
-	padding-bottom: 603px;
+	padding-bottom: 580px;
+	padding-top: 90px;
 }
 
 .info__top-text {
@@ -265,9 +266,12 @@ ul {
 	border: none;
 	cursor: pointer;
 	background-color: transparent;
-	position: absolute;
-	top: 44%;
 	transition: all .3s ease;
+}
+
+.info-btn {
+	position: absolute;
+	top: 45.5%;
 }
 
 .popup-btn:active path {
@@ -275,13 +279,17 @@ ul {
 }
 
 .popup-btn:active circle {
-	fill: #B9C400;
+	stroke: #B9C400;
 }
 
 .popup-btn span {
 	padding-top: 12px;
 	display: block;
 	color: #FFFFFF;
+}
+
+.popup-btn:active span {
+	color: #0093A1;
 }
 
 .info__specs {
@@ -323,13 +331,13 @@ ul {
 .info__specs-caption {
 	flex-basis: 35%;
 	width: 60px;
-	padding: 15px 0 0 0;
+	padding: 15px 0 0 10px;
 }
 
 .info__specs-text {
 	flex-basis:65%;
-	width: 440px;
-	padding: 15px 0 0 0;
+	width: 520px;
+	padding: 15px 0 0 17px;
 }
 
 
@@ -348,6 +356,10 @@ ul {
 	display: flex;
 	align-items: center;
 	padding-top: 150px;
+}
+
+.price__info {
+	flex: 1 1 50%;
 }
 
 .price__title {
@@ -392,5 +404,35 @@ ul {
 	line-height: 45px;
 	color: #0093A1;
 	background-color: transparent;
-	margin-top: 50px;
+	margin-top: 24px;
+	transition: all 0.3s ease;
+}
+
+.price__btn:hover {
+	background-color: #B9C400;
+	color: #262C27;
+	border: 2px solid transparent;
+}
+
+.price__img {
+	flex: 1 1 50%;
+}
+
+/*Price end*/
+
+/*Technology start*/
+
+.video {
+	background-image: url(../images/technology-gb.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 1369px;
+	position: relative;
+}
+
+.video-btn {
+	position: absolute;
+	top: 47.5%;
+	right: 36.5%
 }
