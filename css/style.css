@@ -639,6 +639,11 @@ ul {
 	padding-top: 87px;
 }
 
+.footer__logo:hover path {
+	fill: #0093A1;
+	transition: fill 0.3s ease;
+}
+
 .footer__gallery-title {
 	text-transform: uppercase;
 	font-weight: 700;
